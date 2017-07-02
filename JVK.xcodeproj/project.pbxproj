@@ -15,9 +15,9 @@
 		DC42CC701E52294500E471CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC42CC6E1E52294500E471CB /* LaunchScreen.storyboard */; };
 		DC42CC791E524C4600E471CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC42CC781E524C4600E471CB /* QuartzCore.framework */; };
 		DC42CCBF1E54B16900E471CB /* SMCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CCBE1E54B16900E471CB /* SMCustomButton.m */; };
-		DC42CCC31E56031300E471CB /* ServicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CCC21E56031300E471CB /* ServicesTableViewController.m */; };
+		DC42CCC31E56031300E471CB /* SMServicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CCC21E56031300E471CB /* SMServicesTableViewController.m */; };
 		DC42CCC61E56032C00E471CB /* ServicesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CCC51E56032C00E471CB /* ServicesTableViewCell.m */; };
-		DC42CCC91E5603A600E471CB /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CCC81E5603A600E471CB /* AboutUsViewController.m */; };
+		DC42CCC91E5603A600E471CB /* SMAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CCC81E5603A600E471CB /* SMAboutUsViewController.m */; };
 		DC42CCCC1E5605D200E471CB /* ServiceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CCCB1E5605D200E471CB /* ServiceDetailViewController.m */; };
 		DCCF08E21E57767600E16D2F /* DescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08E11E57767600E16D2F /* DescriptionTableViewCell.m */; };
 		DCCF08E61E577E5100E16D2F /* PortfolioCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08E51E577E5100E16D2F /* PortfolioCollectionViewController.m */; };
@@ -44,12 +44,12 @@
 		DC42CC781E524C4600E471CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DC42CCBD1E54B16900E471CB /* SMCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCustomButton.h; sourceTree = "<group>"; };
 		DC42CCBE1E54B16900E471CB /* SMCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCustomButton.m; sourceTree = "<group>"; };
-		DC42CCC11E56031300E471CB /* ServicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicesTableViewController.h; sourceTree = "<group>"; };
-		DC42CCC21E56031300E471CB /* ServicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesTableViewController.m; sourceTree = "<group>"; };
+		DC42CCC11E56031300E471CB /* SMServicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMServicesTableViewController.h; sourceTree = "<group>"; };
+		DC42CCC21E56031300E471CB /* SMServicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMServicesTableViewController.m; sourceTree = "<group>"; };
 		DC42CCC41E56032C00E471CB /* ServicesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicesTableViewCell.h; sourceTree = "<group>"; };
 		DC42CCC51E56032C00E471CB /* ServicesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesTableViewCell.m; sourceTree = "<group>"; };
-		DC42CCC71E5603A600E471CB /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
-		DC42CCC81E5603A600E471CB /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		DC42CCC71E5603A600E471CB /* SMAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAboutUsViewController.h; sourceTree = "<group>"; };
+		DC42CCC81E5603A600E471CB /* SMAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAboutUsViewController.m; sourceTree = "<group>"; };
 		DC42CCCA1E5605D200E471CB /* ServiceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceDetailViewController.h; sourceTree = "<group>"; };
 		DC42CCCB1E5605D200E471CB /* ServiceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceDetailViewController.m; sourceTree = "<group>"; };
 		DCCF08E01E57767600E16D2F /* DescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionTableViewCell.h; sourceTree = "<group>"; };
@@ -89,6 +89,8 @@
 			children = (
 				DC42CC631E52294500E471CB /* SMHomeViewController.h */,
 				DC42CC641E52294500E471CB /* SMHomeViewController.m */,
+				DC42CCC71E5603A600E471CB /* SMAboutUsViewController.h */,
+				DC42CCC81E5603A600E471CB /* SMAboutUsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -120,8 +122,6 @@
 				DCCF08ED1E5B53AA00E16D2F /* ContactUs */,
 				DC42CCC01E5602F700E471CB /* Services */,
 				DCCF08E31E577E1E00E16D2F /* Portfolio */,
-				DC42CCC71E5603A600E471CB /* AboutUsViewController.h */,
-				DC42CCC81E5603A600E471CB /* AboutUsViewController.m */,
 				DC42CC691E52294500E471CB /* Main.storyboard */,
 				DC42CC6C1E52294500E471CB /* Assets.xcassets */,
 				DC42CC6E1E52294500E471CB /* LaunchScreen.storyboard */,
@@ -152,8 +152,8 @@
 		DC42CCC01E5602F700E471CB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DC42CCC11E56031300E471CB /* ServicesTableViewController.h */,
-				DC42CCC21E56031300E471CB /* ServicesTableViewController.m */,
+				DC42CCC11E56031300E471CB /* SMServicesTableViewController.h */,
+				DC42CCC21E56031300E471CB /* SMServicesTableViewController.m */,
 				DC42CCC41E56032C00E471CB /* ServicesTableViewCell.h */,
 				DC42CCC51E56032C00E471CB /* ServicesTableViewCell.m */,
 				DC42CCCA1E5605D200E471CB /* ServiceDetailViewController.h */,
@@ -279,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC42CCC31E56031300E471CB /* ServicesTableViewController.m in Sources */,
+				DC42CCC31E56031300E471CB /* SMServicesTableViewController.m in Sources */,
 				DCCF08E91E577E6800E16D2F /* PortfolioCollectionViewCell.m in Sources */,
 				DC42CCC61E56032C00E471CB /* ServicesTableViewCell.m in Sources */,
 				DC42CCBF1E54B16900E471CB /* SMCustomButton.m in Sources */,
@@ -289,7 +289,7 @@
 				DC42CCCC1E5605D200E471CB /* ServiceDetailViewController.m in Sources */,
 				DCCF08F21E5B674500E16D2F /* EmailViewController.m in Sources */,
 				DCCF08EC1E5B53A400E16D2F /* ContactUsViewController.m in Sources */,
-				DC42CCC91E5603A600E471CB /* AboutUsViewController.m in Sources */,
+				DC42CCC91E5603A600E471CB /* SMAboutUsViewController.m in Sources */,
 				DC42CC651E52294500E471CB /* SMHomeViewController.m in Sources */,
 				DC42CC5F1E52294500E471CB /* main.m in Sources */,
 				DCCF08E61E577E5100E16D2F /* PortfolioCollectionViewController.m in Sources */,

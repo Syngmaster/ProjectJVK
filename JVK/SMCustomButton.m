@@ -12,9 +12,10 @@
 
 
 - (void)layoutSubviews {
+    
     [super layoutSubviews];
     
-    self.layer.cornerRadius = 25;
+    self.layer.cornerRadius = CGRectGetHeight(self.bounds)/2;
     self.layer.borderColor = [UIColor blackColor].CGColor;
     self.layer.borderWidth = 1.0;
     
@@ -25,9 +26,7 @@
     
     UIFont *font = [UIFont fontWithName:@"Optima" size:25];
     UIColor *textColor = [UIColor colorWithRed:0/255.0 green:176/255.0 blue:240/255.0 alpha:1.0];
-    
     NSDictionary *attributes = @{NSForegroundColorAttributeName : textColor, NSFontAttributeName : font};
-    
     NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:self.titleLabel.text attributes:attributes];
     
     [self setAttributedTitle:attrString forState:UIControlStateNormal];

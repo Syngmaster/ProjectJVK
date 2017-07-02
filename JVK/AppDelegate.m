@@ -20,14 +20,10 @@
     
     [UINavigationBar appearance].barTintColor = [UIColor whiteColor];
     [UITabBar appearance].tintColor = [UIColor colorWithRed:0/255.0 green:176/255.0 blue:240/255.0 alpha:1];
-    
-
-    
     [[UINavigationBar appearance] setTitleTextAttributes:@{
                                                            NSFontAttributeName: [UIFont fontWithName:@"Optima" size:20],
                                                            }];
     
-
     return YES;
 }
 

@@ -30,6 +30,9 @@
     //self.label.shadowOffset = CGSizeMake(0, -1.0);
     self.background.backgroundColor = [UIColor whiteColor];
     self.background.layer.opacity = 0.3;
+    
+    self.layer.borderWidth = 5;
+    self.layer.borderColor = [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:0.5].CGColor;
 
 }
 

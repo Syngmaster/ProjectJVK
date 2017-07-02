@@ -10,7 +10,14 @@
 
 @implementation SMCustomNavigationBar
 
-
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    UIImage *backBtn = [UIImage imageNamed:@"arrow1.png"];
+    backBtn = [backBtn imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.backIndicatorImage = backBtn;
+    self.backIndicatorTransitionMaskImage = backBtn;
+}
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -28,6 +35,10 @@
     UIGraphicsEndImageContext();
     
     [self setBackgroundImage:gradientImage forBarMetrics:UIBarMetricsDefault];
+    
+    
+
+    
 }
 
 

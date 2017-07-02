@@ -1,5 +1,5 @@
 //
-//  AboutUsViewController.h
+//  SMAboutUsViewController.h
 //  JVK
 //
 //  Created by Max&Viktoria on 16/02/2017.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AboutUsViewController : UIViewController
+@interface SMAboutUsViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *photo;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 @end

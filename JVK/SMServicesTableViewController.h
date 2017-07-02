@@ -1,5 +1,5 @@
 //
-//  ServicesTableViewController.h
+//  SMServicesTableViewController.h
 //  JVK
 //
 //  Created by Max&Viktoria on 16/02/2017.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ServicesTableViewController : UITableViewController
+@interface SMServicesTableViewController : UITableViewController
 
 @end
