@@ -10,8 +10,8 @@
 
 @interface ServicesTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *image;
-@property (weak, nonatomic) IBOutlet UILabel *label;
-@property (weak, nonatomic) IBOutlet UILabel *background;
+@property (weak, nonatomic) IBOutlet UIImageView *serviceImageView;
+
+@property (weak, nonatomic) IBOutlet UIView *customViewWithLabel;
 
 @end

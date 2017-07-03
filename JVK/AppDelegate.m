@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Firebase.h>
+
 
 @interface AppDelegate ()
 
@@ -23,6 +25,8 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{
                                                            NSFontAttributeName: [UIFont fontWithName:@"Optima" size:20],
                                                            }];
+    
+    [FIRApp configure];
     
     return YES;
 }

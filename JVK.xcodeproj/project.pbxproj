@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC3F94C5AC3D9ECAEEB54208 /* libPods-JVK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAD81C04565567E345C2955 /* libPods-JVK.a */; };
+		DC21CC471F095E2400BA8558 /* SMTreatmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC461F095E2400BA8558 /* SMTreatmentModel.m */; };
+		DC21CC4A1F095F1F00BA8558 /* SMServicesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC491F095F1F00BA8558 /* SMServicesModel.m */; };
+		DC21CC4C1F0A8ED100BA8558 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC21CC4B1F0A8ED100BA8558 /* GoogleService-Info.plist */; };
 		DC42CC5F1E52294500E471CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CC5E1E52294500E471CB /* main.m */; };
 		DC42CC621E52294500E471CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CC611E52294500E471CB /* AppDelegate.m */; };
 		DC42CC651E52294500E471CB /* SMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CC641E52294500E471CB /* SMHomeViewController.m */; };
@@ -31,6 +35,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6CDCC6E65905DEE41FCD17A1 /* Pods-JVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JVK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JVK/Pods-JVK.debug.xcconfig"; sourceTree = "<group>"; };
+		7CAD81C04565567E345C2955 /* libPods-JVK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JVK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		990D97900C0771DCE66AC8B6 /* Pods-JVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-JVK/Pods-JVK.release.xcconfig"; sourceTree = "<group>"; };
+		DC21CC451F095E2400BA8558 /* SMTreatmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTreatmentModel.h; sourceTree = "<group>"; };
+		DC21CC461F095E2400BA8558 /* SMTreatmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTreatmentModel.m; sourceTree = "<group>"; };
+		DC21CC481F095F1F00BA8558 /* SMServicesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMServicesModel.h; sourceTree = "<group>"; };
+		DC21CC491F095F1F00BA8558 /* SMServicesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMServicesModel.m; sourceTree = "<group>"; };
+		DC21CC4B1F0A8ED100BA8558 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DC42CC5A1E52294500E471CB /* JVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC42CC5E1E52294500E471CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC42CC601E52294500E471CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,12 +90,22 @@
 				DCCF08F41E5C751800E16D2F /* MessageUI.framework in Frameworks */,
 				DCCF08EF1E5B57F400E16D2F /* MapKit.framework in Frameworks */,
 				DC42CC791E524C4600E471CB /* QuartzCore.framework in Frameworks */,
+				BC3F94C5AC3D9ECAEEB54208 /* libPods-JVK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CED7C4DF985D5FE01453FE16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CDCC6E65905DEE41FCD17A1 /* Pods-JVK.debug.xcconfig */,
+				990D97900C0771DCE66AC8B6 /* Pods-JVK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DC21CC431F06B8DA00BA8558 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,12 +117,24 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		DC21CC441F095E0200BA8558 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC21CC451F095E2400BA8558 /* SMTreatmentModel.h */,
+				DC21CC461F095E2400BA8558 /* SMTreatmentModel.m */,
+				DC21CC481F095F1F00BA8558 /* SMServicesModel.h */,
+				DC21CC491F095F1F00BA8558 /* SMServicesModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		DC42CC511E52294500E471CB = {
 			isa = PBXGroup;
 			children = (
 				DC42CC5C1E52294500E471CB /* JVK */,
 				DC42CC5B1E52294500E471CB /* Products */,
 				DC42CC771E524C4600E471CB /* Frameworks */,
+				CED7C4DF985D5FE01453FE16 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +149,7 @@
 		DC42CC5C1E52294500E471CB /* JVK */ = {
 			isa = PBXGroup;
 			children = (
+				DC21CC441F095E0200BA8558 /* Model */,
 				DC21CC431F06B8DA00BA8558 /* Controller */,
 				DCCF093A1E6707D900E16D2F /* View */,
 				DC42CC601E52294500E471CB /* AppDelegate.h */,
@@ -125,6 +160,7 @@
 				DC42CC691E52294500E471CB /* Main.storyboard */,
 				DC42CC6C1E52294500E471CB /* Assets.xcassets */,
 				DC42CC6E1E52294500E471CB /* LaunchScreen.storyboard */,
+				DC21CC4B1F0A8ED100BA8558 /* GoogleService-Info.plist */,
 				DC42CC711E52294500E471CB /* Info.plist */,
 				DC42CC5D1E52294500E471CB /* Supporting Files */,
 			);
@@ -145,6 +181,7 @@
 				DCCF08F31E5C751800E16D2F /* MessageUI.framework */,
 				DCCF08EE1E5B57F400E16D2F /* MapKit.framework */,
 				DC42CC781E524C4600E471CB /* QuartzCore.framework */,
+				7CAD81C04565567E345C2955 /* libPods-JVK.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,9 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC42CC741E52294500E471CB /* Build configuration list for PBXNativeTarget "JVK" */;
 			buildPhases = (
+				7F7F2F6ED4AF8AF09D340510 /* [CP] Check Pods Manifest.lock */,
 				DC42CC561E52294500E471CB /* Sources */,
 				DC42CC571E52294500E471CB /* Frameworks */,
 				DC42CC581E52294500E471CB /* Resources */,
+				4EDB328B2D423B8FE37B4CFF /* [CP] Embed Pods Frameworks */,
+				196ABEF4187F9CADA0840DE1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,7 +278,7 @@
 				TargetAttributes = {
 					DC42CC591E52294500E471CB = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 4PMQKT6K8N;
+						DevelopmentTeam = RLMXU9393M;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -269,10 +309,59 @@
 				DC42CC701E52294500E471CB /* LaunchScreen.storyboard in Resources */,
 				DC42CC6D1E52294500E471CB /* Assets.xcassets in Resources */,
 				DC42CC6B1E52294500E471CB /* Main.storyboard in Resources */,
+				DC21CC4C1F0A8ED100BA8558 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		196ABEF4187F9CADA0840DE1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JVK/Pods-JVK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EDB328B2D423B8FE37B4CFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JVK/Pods-JVK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F7F2F6ED4AF8AF09D340510 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC42CC561E52294500E471CB /* Sources */ = {
@@ -280,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC42CCC31E56031300E471CB /* SMServicesTableViewController.m in Sources */,
+				DC21CC471F095E2400BA8558 /* SMTreatmentModel.m in Sources */,
 				DCCF08E91E577E6800E16D2F /* PortfolioCollectionViewCell.m in Sources */,
 				DC42CCC61E56032C00E471CB /* ServicesTableViewCell.m in Sources */,
 				DC42CCBF1E54B16900E471CB /* SMCustomButton.m in Sources */,
@@ -287,6 +377,7 @@
 				DCCF09461E670D6D00E16D2F /* SMCustomImageView.m in Sources */,
 				DCCF08E21E57767600E16D2F /* DescriptionTableViewCell.m in Sources */,
 				DC42CCCC1E5605D200E471CB /* ServiceDetailViewController.m in Sources */,
+				DC21CC4A1F095F1F00BA8558 /* SMServicesModel.m in Sources */,
 				DCCF08F21E5B674500E16D2F /* EmailViewController.m in Sources */,
 				DCCF08EC1E5B53A400E16D2F /* ContactUsViewController.m in Sources */,
 				DC42CCC91E5603A600E471CB /* SMAboutUsViewController.m in Sources */,
@@ -409,9 +500,10 @@
 		};
 		DC42CC751E52294500E471CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CDCC6E65905DEE41FCD17A1 /* Pods-JVK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4PMQKT6K8N;
+				DEVELOPMENT_TEAM = RLMXU9393M;
 				INFOPLIST_FILE = JVK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.JVK;
@@ -421,9 +513,10 @@
 		};
 		DC42CC761E52294500E471CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 990D97900C0771DCE66AC8B6 /* Pods-JVK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4PMQKT6K8N;
+				DEVELOPMENT_TEAM = RLMXU9393M;
 				INFOPLIST_FILE = JVK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.JVK;

@@ -14,32 +14,36 @@
     [super awakeFromNib];
     // Initialization code
     
-     /*CALayer *layer = [CALayer layer];
-     layer.frame = CGRectMake(0,
-                              0,
-                              self.label.bounds.size.width,
-                              self.label.bounds.size.height);
-    
-     layer.backgroundColor = [UIColor whiteColor].CGColor;
-     layer.opacity = 1.0;
-     [self.layer insertSublayer:layer atIndex:1];*/
-    
-    self.label.font = [UIFont fontWithName:@"Optima" size:35];
-    self.label.textColor = [UIColor colorWithRed:0/255.0 green:176/255.0 blue:240/255.0 alpha:1.0];
-    //self.label.shadowColor = [UIColor whiteColor];
-    //self.label.shadowOffset = CGSizeMake(0, -1.0);
-    self.background.backgroundColor = [UIColor whiteColor];
-    self.background.layer.opacity = 0.3;
-    
     self.layer.borderWidth = 5;
     self.layer.borderColor = [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:0.5].CGColor;
+    
+    self.customViewWithLabel.alpha = 0.3;
+    
+    [self addSubview:[self createLabelInView:self.customViewWithLabel]];
 
 }
 
--(void) layoutSubviews {
+- (UIView *)createLabelInView:(UIView *)view {
+    
+    CGRect labelFrame = CGRectMake(CGRectGetMinX(view.frame),CGRectGetMinY(view.frame), CGRectGetWidth(view.frame), CGRectGetHeight(view.frame));
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:labelFrame];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = @"Hello!";
+    
+    UIFont *font = [UIFont fontWithName:@"Optima" size:35];
+    UIColor *textColor = [UIColor colorWithRed:0/255.0 green:176/255.0 blue:240/255.0 alpha:1.0];
+    NSDictionary *attributes = @{NSForegroundColorAttributeName : textColor, NSFontAttributeName : font};
+    NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:titleLabel.text attributes:attributes];
+    [titleLabel setAttributedText:attrString];
+    
+    return titleLabel;
+}
+
+- (void)layoutSubviews {
     
     [super layoutSubviews];
-    self.image.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
+    
+    self.serviceImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
     
 }
 

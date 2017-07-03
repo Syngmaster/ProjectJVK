@@ -46,8 +46,8 @@
         cell = [[ServicesTableViewCell alloc] init];
     }
     
-    cell.label.text = self.titleList[indexPath.row];
-    cell.image.image = [UIImage imageNamed:self.imageList[indexPath.row]];
+    //cell.label.text = self.titleList[indexPath.row];
+    cell.serviceImageView.image = [UIImage imageNamed:self.imageList[indexPath.row]];
     
     return cell;
 }
