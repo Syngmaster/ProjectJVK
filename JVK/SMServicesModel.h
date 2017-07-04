@@ -13,4 +13,6 @@
 @property (strong, nonatomic) NSString *serviceTitle;
 @property (strong, nonatomic) NSString *servicePrice;
 
+- (instancetype)initWithDict:(NSDictionary *) dict;
+
 @end

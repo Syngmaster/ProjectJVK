@@ -10,4 +10,17 @@
 
 @implementation SMServicesModel
 
+- (instancetype)initWithDict:(NSDictionary *) dict {
+    
+    self = [super init];
+    if (self) {
+        
+        self.serviceTitle = [dict objectForKey:@"title"];
+        self.servicePrice = [dict objectForKey:@"price"];
+        
+    }
+    
+    return self;
+}
+
 @end

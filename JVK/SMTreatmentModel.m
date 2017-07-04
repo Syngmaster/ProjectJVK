@@ -7,7 +7,37 @@
 //
 
 #import "SMTreatmentModel.h"
+#import "SMServicesModel.h"
 
 @implementation SMTreatmentModel
+
+- (instancetype)initWithDict:(NSDictionary *) dict {
+    
+    self = [super init];
+    if (self) {
+        
+        self.treatmentTitle = [dict objectForKey:@"title"];
+        
+        if ([self.treatmentTitle isEqualToString:@"Hands"]) {
+            self.treatImage = [UIImage imageNamed:@"manicure.jpeg"];
+        } else if ([self.treatmentTitle isEqualToString:@"Legs"]) {
+            self.treatImage = [UIImage imageNamed:@"pedicure.jpeg"];
+        } else if ([self.treatmentTitle isEqualToString:@"Treading"]) {
+            self.treatImage = [UIImage imageNamed:@"face1.jpeg"];
+        } else {
+            self.treatImage = [UIImage imageNamed:@"eyebrow.jpeg"];
+        }
+                
+        NSMutableArray *array = [NSMutableArray array];
+        
+        for (NSString *key in [dict objectForKey:@"Services"]) {
+            SMServicesModel *model = [[SMServicesModel alloc] initWithDict:dict[key]];
+            [array addObject:model];
+        }
+        self.serviceArray = array;
+    }
+    
+    return self;
+}
 
 @end

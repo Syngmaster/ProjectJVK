@@ -6,15 +6,15 @@
 //  Copyright © 2017 Max&Viktoria. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@class SMServicesModel;
+#import <UIKit/UIKit.h>
 
 @interface SMTreatmentModel : NSObject
 
 @property (strong, nonatomic) NSString *treatmentTitle;
 @property (strong, nonatomic) NSString *treatmentImage;
-@property (strong, nonatomic) SMServicesModel *services;
+@property (strong, nonatomic) UIImage *treatImage;
+@property (strong, nonatomic) NSArray *serviceArray;
 
+- (instancetype)initWithDict:(NSDictionary *) dict;
 
 @end
