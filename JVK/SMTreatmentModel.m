@@ -34,6 +34,8 @@
             SMServicesModel *model = [[SMServicesModel alloc] initWithDict:serviceDict[key]];
             [array addObject:model];
         }
+        NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"serviceTitle" ascending:YES];
+        [array sortUsingDescriptors:@[sortDesc]];
         self.serviceArray = array;
     }
     

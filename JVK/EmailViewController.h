@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class SMCustomButton;
+
 @interface EmailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
-@property (weak, nonatomic) IBOutlet UITextView *textField;
+@property (weak, nonatomic) IBOutlet UITextView *emailBodyTextView;
 
-@property (weak, nonatomic) IBOutlet UIButton *sendBtn;
-
-
-- (IBAction)sendEmail:(id)sender;
+- (IBAction)sendEmailAction:(SMCustomButton *)sender;
 
 @end

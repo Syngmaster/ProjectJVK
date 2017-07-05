@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="453" y="1057"/>
+            <point key="canvasLocation" x="1651" y="-644"/>
         </scene>
         <!--About us-->
         <scene sceneID="EXA-dU-AVl">
@@ -180,7 +180,7 @@
         <!--Contact us-->
         <scene sceneID="jeH-5j-bMk">
             <objects>
-                <viewController id="qn9-H2-rr1" customClass="ContactUsViewController" sceneMemberID="viewController">
+                <viewController id="qn9-H2-rr1" customClass="SMContactUsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VZE-SJ-VwJ"/>
                         <viewControllerLayoutGuide type="bottom" id="nhj-e3-Yoe"/>
@@ -278,16 +278,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Contact us" id="6eX-Oa-llw"/>
                     <connections>
-                        <outlet property="callBtn" destination="K0i-e8-qPW" id="qIq-ql-lWf"/>
-                        <outlet property="directBtn" destination="wbw-QN-YKI" id="YXs-Jk-6Eh"/>
-                        <outlet property="emailBtn" destination="BCW-nG-7Gb" id="KBp-ad-TnB"/>
-                        <outlet property="faceBtn" destination="rdO-0B-wmU" id="5H9-eM-lez"/>
                         <outlet property="mapView" destination="T4K-TM-X6I" id="1dN-Y5-sFq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uu-Kt-Nej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-304.6875" y="1056.875"/>
+            <point key="canvasLocation" x="-168" y="1057"/>
         </scene>
         <!--Email View Controller-->
         <scene sceneID="7nQ-yU-hWl">
@@ -320,10 +316,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="dismissKeyboard:" destination="BWz-XJ-JmV" eventType="editingDidEndOnExit" id="n1C-S0-f8R"/>
-                                </connections>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMt-0a-je3">
                                 <rect key="frame" x="16" y="72" width="343" height="30"/>
@@ -341,10 +334,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="dismissKeyboard:" destination="BWz-XJ-JmV" eventType="editingDidEndOnExit" id="jFQ-61-MsU"/>
-                                </connections>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8o2-b3-OTj">
                                 <rect key="frame" x="16" y="224" width="343" height="30"/>
@@ -363,6 +353,7 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoD-f2-0Fq" customClass="SMCustomButton">
                                 <rect key="frame" x="16" y="548" width="343" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8aN-mK-qru"/>
                                 </constraints>
@@ -371,7 +362,7 @@
                                     <color key="titleColor" red="0.0" green="0.69019607839999997" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendEmail:" destination="BWz-XJ-JmV" eventType="touchUpInside" id="NcX-nt-mTo"/>
+                                    <action selector="sendEmailAction:" destination="BWz-XJ-JmV" eventType="touchUpInside" id="rjN-CH-J5D"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -406,15 +397,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailBodyTextView" destination="a6G-SH-oTa" id="1dr-LS-1LW"/>
                         <outlet property="emailField" destination="IQJ-oD-vU9" id="9og-Jd-hYe"/>
                         <outlet property="nameField" destination="RyH-So-SZi" id="5Zf-dX-sSe"/>
-                        <outlet property="sendBtn" destination="WoD-f2-0Fq" id="BlY-jt-nEz"/>
-                        <outlet property="textField" destination="a6G-SH-oTa" id="g11-7y-o0j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txJ-BO-l1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802" y="1472"/>
+            <point key="canvasLocation" x="668" y="1057"/>
         </scene>
         <!--Services-->
         <scene sceneID="yQl-ek-xeS">

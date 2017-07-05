@@ -1,24 +1,23 @@
 //
-//  ContactUsViewController.m
+//  SMContactUsViewController.m
 //  JVK
 //
 //  Created by Max&Viktoria on 20/02/2017.
 //  Copyright © 2017 Max&Viktoria. All rights reserved.
 //
 
-#import "ContactUsViewController.h"
+#import "SMContactUsViewController.h"
 #import <MapKit/MapKit.h>
 #import "SMLocationModel.h"
 #import "SMCustomAnnotationView.h"
 
-static CGFloat latitude = 53.71659349999999;
-static CGFloat longitude = -6.355589900000041;
+@interface SMContactUsViewController () <MKMapViewDelegate>
 
-@interface ContactUsViewController () <MKMapViewDelegate>
+@property (strong, nonatomic) SMLocationModel *model;
 
 @end
 
-@implementation ContactUsViewController
+@implementation SMContactUsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +26,7 @@ static CGFloat longitude = -6.355589900000041;
     self.navigationItem.backBarButtonItem.title=@"";
     
     SMLocationModel *model = [SMLocationModel generateLocation];
-    
+    self.model = model;
     [self.mapView setRegion:model.region];
     [self.mapView addAnnotation:model];
 
@@ -38,8 +37,7 @@ static CGFloat longitude = -6.355589900000041;
 
 - (IBAction)directButton:(id)sender {
     
-
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/maps?daddr=%f,%f", latitude, longitude]] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/maps?daddr=%f,%f", self.model.coordinate.latitude, self.model.coordinate.longitude]] options:@{} completionHandler:nil];
 }
 
 - (IBAction)callButton:(id)sender {

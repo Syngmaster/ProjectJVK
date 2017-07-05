@@ -30,7 +30,7 @@
 		DCCF08E21E57767600E16D2F /* SMServiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08E11E57767600E16D2F /* SMServiceTableViewCell.m */; };
 		DCCF08E61E577E5100E16D2F /* PortfolioCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08E51E577E5100E16D2F /* PortfolioCollectionViewController.m */; };
 		DCCF08E91E577E6800E16D2F /* PortfolioCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08E81E577E6800E16D2F /* PortfolioCollectionViewCell.m */; };
-		DCCF08EC1E5B53A400E16D2F /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08EB1E5B53A400E16D2F /* ContactUsViewController.m */; };
+		DCCF08EC1E5B53A400E16D2F /* SMContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08EB1E5B53A400E16D2F /* SMContactUsViewController.m */; };
 		DCCF08EF1E5B57F400E16D2F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCF08EE1E5B57F400E16D2F /* MapKit.framework */; };
 		DCCF08F21E5B674500E16D2F /* EmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08F11E5B674500E16D2F /* EmailViewController.m */; };
 		DCCF08F41E5C751800E16D2F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCF08F31E5C751800E16D2F /* MessageUI.framework */; };
@@ -82,8 +82,8 @@
 		DCCF08E51E577E5100E16D2F /* PortfolioCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortfolioCollectionViewController.m; sourceTree = "<group>"; };
 		DCCF08E71E577E6800E16D2F /* PortfolioCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortfolioCollectionViewCell.h; sourceTree = "<group>"; };
 		DCCF08E81E577E6800E16D2F /* PortfolioCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortfolioCollectionViewCell.m; sourceTree = "<group>"; };
-		DCCF08EA1E5B53A400E16D2F /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
-		DCCF08EB1E5B53A400E16D2F /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
+		DCCF08EA1E5B53A400E16D2F /* SMContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMContactUsViewController.h; sourceTree = "<group>"; };
+		DCCF08EB1E5B53A400E16D2F /* SMContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMContactUsViewController.m; sourceTree = "<group>"; };
 		DCCF08EE1E5B57F400E16D2F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DCCF08F01E5B674500E16D2F /* EmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailViewController.h; sourceTree = "<group>"; };
 		DCCF08F11E5B674500E16D2F /* EmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailViewController.m; sourceTree = "<group>"; };
@@ -129,6 +129,8 @@
 				DC42CCC21E56031300E471CB /* SMTreatmentTableViewController.m */,
 				DC42CCCA1E5605D200E471CB /* SMServiceTableViewController.h */,
 				DC42CCCB1E5605D200E471CB /* SMServiceTableViewController.m */,
+				DCCF08EA1E5B53A400E16D2F /* SMContactUsViewController.h */,
+				DCCF08EB1E5B53A400E16D2F /* SMContactUsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -219,8 +221,6 @@
 		DCCF08ED1E5B53AA00E16D2F /* ContactUs */ = {
 			isa = PBXGroup;
 			children = (
-				DCCF08EA1E5B53A400E16D2F /* ContactUsViewController.h */,
-				DCCF08EB1E5B53A400E16D2F /* ContactUsViewController.m */,
 				DCCF08F01E5B674500E16D2F /* EmailViewController.h */,
 				DCCF08F11E5B674500E16D2F /* EmailViewController.m */,
 			);
@@ -385,7 +385,7 @@
 				DC42CCCC1E5605D200E471CB /* SMServiceTableViewController.m in Sources */,
 				DC21CC4A1F095F1F00BA8558 /* SMServicesModel.m in Sources */,
 				DCCF08F21E5B674500E16D2F /* EmailViewController.m in Sources */,
-				DCCF08EC1E5B53A400E16D2F /* ContactUsViewController.m in Sources */,
+				DCCF08EC1E5B53A400E16D2F /* SMContactUsViewController.m in Sources */,
 				DC42CCC91E5603A600E471CB /* SMAboutUsViewController.m in Sources */,
 				DC1C17EB1F0D4D97008DD23A /* SMLocationModel.m in Sources */,
 				DC42CC651E52294500E471CB /* SMHomeViewController.m in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ContactUsViewController.h
+//  SMContactUsViewController.h
 //  JVK
 //
 //  Created by Max&Viktoria on 20/02/2017.
@@ -9,14 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface ContactUsViewController : UIViewController
+@interface SMContactUsViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-
-@property (weak, nonatomic) IBOutlet UIButton *directBtn;
-@property (weak, nonatomic) IBOutlet UIButton *callBtn;
-@property (weak, nonatomic) IBOutlet UIButton *emailBtn;
-@property (weak, nonatomic) IBOutlet UIButton *faceBtn;
 
 - (IBAction)directButton:(id)sender;
 - (IBAction)callButton:(id)sender;
