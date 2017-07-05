@@ -1,5 +1,5 @@
 //
-//  DescriptionTableViewCell.h
+//  SMServiceTableViewCell.h
 //  JVK
 //
 //  Created by Max&Viktoria on 17/02/2017.
@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DescriptionTableViewCell : UITableViewCell
+@class SMServicesModel;
+
+@interface SMServiceTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+
+- (void)configureCell:(SMServicesModel *) model;
 
 @end

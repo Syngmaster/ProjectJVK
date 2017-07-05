@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class SMTreatmentModel;
+
 @interface SMServiceTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property NSString *sentData;
+@property (strong, nonatomic) SMTreatmentModel *model;
 
 
 @end

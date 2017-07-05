@@ -42,6 +42,7 @@
     [self.ref observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         
         NSDictionary *dict = snapshot.value;
+        //NSLog(@"Dict: %@", dict);
         NSMutableArray *array = [NSMutableArray array];
         
         for (NSString *key in dict) {

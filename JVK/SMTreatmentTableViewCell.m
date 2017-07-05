@@ -30,7 +30,6 @@
     UILabel *titleLabel = [self createLabelInView:self.customViewWithLabel];
     [self addSubview:titleLabel];
     self.titleLabel = titleLabel;
-
 }
 
 - (UILabel *)createLabelInView:(UIView *)view {
@@ -50,7 +49,7 @@
 - (void)layoutSubviews {
     
     [super layoutSubviews];
-    
+      
     self.serviceImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
     
 }

@@ -29,9 +29,9 @@
         }
                 
         NSMutableArray *array = [NSMutableArray array];
-        
-        for (NSString *key in [dict objectForKey:@"Services"]) {
-            SMServicesModel *model = [[SMServicesModel alloc] initWithDict:dict[key]];
+        NSDictionary *serviceDict = [dict objectForKey:@"Services"];
+        for (NSString *key in serviceDict) {
+            SMServicesModel *model = [[SMServicesModel alloc] initWithDict:serviceDict[key]];
             [array addObject:model];
         }
         self.serviceArray = array;

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BC3F94C5AC3D9ECAEEB54208 /* libPods-JVK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAD81C04565567E345C2955 /* libPods-JVK.a */; };
+		DC1C17EB1F0D4D97008DD23A /* SMLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1C17EA1F0D4D97008DD23A /* SMLocationModel.m */; };
+		DC1C17EE1F0D53EF008DD23A /* SMCustomMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1C17ED1F0D53EF008DD23A /* SMCustomMapView.m */; };
+		DC1C17F71F0D65CC008DD23A /* SMCustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1C17F61F0D65CC008DD23A /* SMCustomAnnotationView.m */; };
 		DC21CC471F095E2400BA8558 /* SMTreatmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC461F095E2400BA8558 /* SMTreatmentModel.m */; };
 		DC21CC4A1F095F1F00BA8558 /* SMServicesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC491F095F1F00BA8558 /* SMServicesModel.m */; };
 		DC21CC4C1F0A8ED100BA8558 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC21CC4B1F0A8ED100BA8558 /* GoogleService-Info.plist */; };
@@ -24,7 +27,7 @@
 		DC42CCC61E56032C00E471CB /* SMTreatmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CCC51E56032C00E471CB /* SMTreatmentTableViewCell.m */; };
 		DC42CCC91E5603A600E471CB /* SMAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CCC81E5603A600E471CB /* SMAboutUsViewController.m */; };
 		DC42CCCC1E5605D200E471CB /* SMServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC42CCCB1E5605D200E471CB /* SMServiceTableViewController.m */; };
-		DCCF08E21E57767600E16D2F /* DescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08E11E57767600E16D2F /* DescriptionTableViewCell.m */; };
+		DCCF08E21E57767600E16D2F /* SMServiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08E11E57767600E16D2F /* SMServiceTableViewCell.m */; };
 		DCCF08E61E577E5100E16D2F /* PortfolioCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08E51E577E5100E16D2F /* PortfolioCollectionViewController.m */; };
 		DCCF08E91E577E6800E16D2F /* PortfolioCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08E81E577E6800E16D2F /* PortfolioCollectionViewCell.m */; };
 		DCCF08EC1E5B53A400E16D2F /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF08EB1E5B53A400E16D2F /* ContactUsViewController.m */; };
@@ -39,6 +42,12 @@
 		6CDCC6E65905DEE41FCD17A1 /* Pods-JVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JVK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JVK/Pods-JVK.debug.xcconfig"; sourceTree = "<group>"; };
 		7CAD81C04565567E345C2955 /* libPods-JVK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JVK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		990D97900C0771DCE66AC8B6 /* Pods-JVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-JVK/Pods-JVK.release.xcconfig"; sourceTree = "<group>"; };
+		DC1C17E91F0D4D97008DD23A /* SMLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLocationModel.h; sourceTree = "<group>"; };
+		DC1C17EA1F0D4D97008DD23A /* SMLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLocationModel.m; sourceTree = "<group>"; };
+		DC1C17EC1F0D53EF008DD23A /* SMCustomMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCustomMapView.h; sourceTree = "<group>"; };
+		DC1C17ED1F0D53EF008DD23A /* SMCustomMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCustomMapView.m; sourceTree = "<group>"; };
+		DC1C17F51F0D65CC008DD23A /* SMCustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCustomAnnotationView.h; sourceTree = "<group>"; };
+		DC1C17F61F0D65CC008DD23A /* SMCustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCustomAnnotationView.m; sourceTree = "<group>"; };
 		DC21CC451F095E2400BA8558 /* SMTreatmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTreatmentModel.h; sourceTree = "<group>"; };
 		DC21CC461F095E2400BA8558 /* SMTreatmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTreatmentModel.m; sourceTree = "<group>"; };
 		DC21CC481F095F1F00BA8558 /* SMServicesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMServicesModel.h; sourceTree = "<group>"; };
@@ -67,8 +76,8 @@
 		DC42CCC81E5603A600E471CB /* SMAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAboutUsViewController.m; sourceTree = "<group>"; };
 		DC42CCCA1E5605D200E471CB /* SMServiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMServiceTableViewController.h; sourceTree = "<group>"; };
 		DC42CCCB1E5605D200E471CB /* SMServiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMServiceTableViewController.m; sourceTree = "<group>"; };
-		DCCF08E01E57767600E16D2F /* DescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionTableViewCell.h; sourceTree = "<group>"; };
-		DCCF08E11E57767600E16D2F /* DescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionTableViewCell.m; sourceTree = "<group>"; };
+		DCCF08E01E57767600E16D2F /* SMServiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMServiceTableViewCell.h; sourceTree = "<group>"; };
+		DCCF08E11E57767600E16D2F /* SMServiceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMServiceTableViewCell.m; sourceTree = "<group>"; };
 		DCCF08E41E577E5100E16D2F /* PortfolioCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortfolioCollectionViewController.h; sourceTree = "<group>"; };
 		DCCF08E51E577E5100E16D2F /* PortfolioCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortfolioCollectionViewController.m; sourceTree = "<group>"; };
 		DCCF08E71E577E6800E16D2F /* PortfolioCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortfolioCollectionViewCell.h; sourceTree = "<group>"; };
@@ -133,6 +142,8 @@
 				DC21CC491F095F1F00BA8558 /* SMServicesModel.m */,
 				DC21CC4D1F0A9C3000BA8558 /* SMDataService.h */,
 				DC21CC4E1F0A9C3000BA8558 /* SMDataService.m */,
+				DC1C17E91F0D4D97008DD23A /* SMLocationModel.h */,
+				DC1C17EA1F0D4D97008DD23A /* SMLocationModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -163,7 +174,6 @@
 				DCCF093A1E6707D900E16D2F /* View */,
 				DC42CC601E52294500E471CB /* AppDelegate.h */,
 				DC42CC611E52294500E471CB /* AppDelegate.m */,
-				DCCF08DF1E57762A00E16D2F /* Description */,
 				DCCF08ED1E5B53AA00E16D2F /* ContactUs */,
 				DCCF08E31E577E1E00E16D2F /* Portfolio */,
 				DC42CC691E52294500E471CB /* Main.storyboard */,
@@ -195,15 +205,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DCCF08DF1E57762A00E16D2F /* Description */ = {
-			isa = PBXGroup;
-			children = (
-				DCCF08E01E57767600E16D2F /* DescriptionTableViewCell.h */,
-				DCCF08E11E57767600E16D2F /* DescriptionTableViewCell.m */,
-			);
-			name = Description;
-			sourceTree = "<group>";
-		};
 		DCCF08E31E577E1E00E16D2F /* Portfolio */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,12 +232,18 @@
 			children = (
 				DC42CCC41E56032C00E471CB /* SMTreatmentTableViewCell.h */,
 				DC42CCC51E56032C00E471CB /* SMTreatmentTableViewCell.m */,
+				DCCF08E01E57767600E16D2F /* SMServiceTableViewCell.h */,
+				DCCF08E11E57767600E16D2F /* SMServiceTableViewCell.m */,
 				DC42CCBD1E54B16900E471CB /* SMCustomButton.h */,
 				DC42CCBE1E54B16900E471CB /* SMCustomButton.m */,
 				DCCF09411E67095C00E16D2F /* SMCustomNavigationBar.h */,
 				DCCF09421E67095C00E16D2F /* SMCustomNavigationBar.m */,
 				DCCF09441E670D6D00E16D2F /* SMCustomImageView.h */,
 				DCCF09451E670D6D00E16D2F /* SMCustomImageView.m */,
+				DC1C17EC1F0D53EF008DD23A /* SMCustomMapView.h */,
+				DC1C17ED1F0D53EF008DD23A /* SMCustomMapView.m */,
+				DC1C17F51F0D65CC008DD23A /* SMCustomAnnotationView.h */,
+				DC1C17F61F0D65CC008DD23A /* SMCustomAnnotationView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -365,6 +372,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1C17F71F0D65CC008DD23A /* SMCustomAnnotationView.m in Sources */,
+				DC1C17EE1F0D53EF008DD23A /* SMCustomMapView.m in Sources */,
 				DC42CCC31E56031300E471CB /* SMTreatmentTableViewController.m in Sources */,
 				DC21CC471F095E2400BA8558 /* SMTreatmentModel.m in Sources */,
 				DCCF08E91E577E6800E16D2F /* PortfolioCollectionViewCell.m in Sources */,
@@ -372,12 +381,13 @@
 				DC42CCBF1E54B16900E471CB /* SMCustomButton.m in Sources */,
 				DC42CC621E52294500E471CB /* AppDelegate.m in Sources */,
 				DCCF09461E670D6D00E16D2F /* SMCustomImageView.m in Sources */,
-				DCCF08E21E57767600E16D2F /* DescriptionTableViewCell.m in Sources */,
+				DCCF08E21E57767600E16D2F /* SMServiceTableViewCell.m in Sources */,
 				DC42CCCC1E5605D200E471CB /* SMServiceTableViewController.m in Sources */,
 				DC21CC4A1F095F1F00BA8558 /* SMServicesModel.m in Sources */,
 				DCCF08F21E5B674500E16D2F /* EmailViewController.m in Sources */,
 				DCCF08EC1E5B53A400E16D2F /* ContactUsViewController.m in Sources */,
 				DC42CCC91E5603A600E471CB /* SMAboutUsViewController.m in Sources */,
+				DC1C17EB1F0D4D97008DD23A /* SMLocationModel.m in Sources */,
 				DC42CC651E52294500E471CB /* SMHomeViewController.m in Sources */,
 				DC42CC5F1E52294500E471CB /* main.m in Sources */,
 				DCCF08E61E577E5100E16D2F /* PortfolioCollectionViewController.m in Sources */,
