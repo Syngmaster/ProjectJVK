@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +37,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>D51B8677773C0BF88AB76EEF31212C74</key>
+		<key>3C7B23B3FE0CE1A6131C7E09B3F47DA3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -33,6 +48,21 @@
 			<true/>
 		</dict>
 		<key>E1BBB76ADBF2EF4EF2CE5DF6BBC77296</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E899E4ED94DF78A2BD5BD2531C5F995E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F58CF3B268C937FF221EC44C97C18A9F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB06743FD599C11559E52D2D552AEE80</key>
 		<dict>
 			<key>primary</key>
 			<true/>

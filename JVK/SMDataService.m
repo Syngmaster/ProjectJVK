@@ -8,6 +8,8 @@
 
 #import "SMDataService.h"
 #import "SMTreatmentModel.h"
+#import "SMPortfolioModel.h"
+#import <FBSDKCoreKit.h>
 
 @implementation SMDataService
 
@@ -55,6 +57,35 @@
         [array sortUsingDescriptors:@[desc]];
         completionHandler(array);
         
+    }];
+    
+}
+
+- (void)getPortfolioPhotos:(modelBlock) completionHandler {
+    
+    NSDictionary *params = @{@"fields" : @"source", @"access_token" : @"315704588878166|200edbb2d7276476f9949f5f5bbadc0c", @"count" : @183};
+    
+    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"1720223838243039/photos" parameters:params HTTPMethod:@"GET"];
+    
+    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, NSDictionary *result, NSError *error) {
+
+    
+        NSLog(@"Result: %@", result);
+        
+        NSArray *resultArray = [result objectForKey:@"data"];
+        NSMutableArray *array = [NSMutableArray array];
+        
+        for (NSDictionary *dict in resultArray) {
+            SMPortfolioModel *model = [[SMPortfolioModel alloc] initWithDict:dict];
+            [array addObject:model];
+        }
+        
+        completionHandler(array);
+        
+        if (error) {
+            NSLog(@"Error: %@", error.debugDescription);
+        }
+    
     }];
     
 }

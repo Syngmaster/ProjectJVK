@@ -24,5 +24,6 @@ typedef void(^imageDataBlock)(NSData *data, NSError *error);
 
 + (SMDataService *)sharedInstance;
 - (void)getTreatments:(modelBlock) completionHandler;
+- (void)getPortfolioPhotos:(modelBlock) completionHandler;
 
 @end

@@ -23,20 +23,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.activityIndicator startAnimating];
+    
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem.title=@"";
-    
     
     [[SMDataService sharedInstance] getTreatments:^(NSArray *resultArray) {
         
         self.dataArray = resultArray;
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
+        [self.activityIndicator stopAnimating];
+        [self updateTableData];
         
     }];
     
+}
+
+- (void)updateTableData {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
 }
 
 
