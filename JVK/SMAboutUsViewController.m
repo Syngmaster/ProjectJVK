@@ -8,18 +8,11 @@
 
 #import "SMAboutUsViewController.h"
 
-@interface SMAboutUsViewController ()
-
-@end
-
 @implementation SMAboutUsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
 }
-
-
-
 
 @end

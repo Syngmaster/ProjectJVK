@@ -21,14 +21,33 @@
     // Override point for customization after application launch.
     
     [UINavigationBar appearance].barTintColor = [UIColor whiteColor];
-    [UITabBar appearance].tintColor = [UIColor colorWithRed:0/255.0 green:176/255.0 blue:240/255.0 alpha:1];
     [[UINavigationBar appearance] setTitleTextAttributes:@{
                                                            NSFontAttributeName: [UIFont fontWithName:@"Optima" size:20],
                                                            }];
     
+    UITabBarController *tabVC = (UITabBarController *)[UIApplication sharedApplication].windows.firstObject.rootViewController;
+    [UITabBar appearance].backgroundImage = [self drawGradientInView:tabVC];
+
     [FIRApp configure];
     
     return YES;
+}
+
+- (UIImage *)drawGradientInView:(UITabBarController *) tabBarVC {
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    
+    gradient.frame = CGRectMake(CGRectGetMinX(tabBarVC.tabBar.frame), CGRectGetMinY(tabBarVC.tabBar.frame), CGRectGetWidth(tabBarVC.view.frame), CGRectGetHeight(tabBarVC.tabBar.frame));
+    
+    gradient.colors = @[(__bridge id)[UIColor colorWithRed:220.0/255.0 green:220.0/255.0 blue:220.0/255.0 alpha:1.0].CGColor, (__bridge id)[UIColor whiteColor].CGColor];
+    gradient.startPoint = CGPointMake(0.0, 0.5);
+    gradient.endPoint = CGPointMake(0.5, 0.5);
+    
+    UIGraphicsBeginImageContext(gradient.bounds.size);
+    [gradient renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *gradientImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return gradientImage;
 }
 
 

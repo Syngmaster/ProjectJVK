@@ -32,6 +32,7 @@
         
         self.dataArray = resultArray;
         [self.activityIndicator stopAnimating];
+        [self.activityIndicator hidesWhenStopped];
         [self updateTableData];
         
     }];
@@ -71,7 +72,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     SMTreatmentModel *model = [self.dataArray objectAtIndex:indexPath.row];
     

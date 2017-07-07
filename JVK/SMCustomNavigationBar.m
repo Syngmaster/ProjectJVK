@@ -36,9 +36,6 @@
     
     [self setBackgroundImage:gradientImage forBarMetrics:UIBarMetricsDefault];
     
-    
-
-    
 }
 
 

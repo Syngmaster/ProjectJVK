@@ -31,6 +31,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [[SMDataService sharedInstance] getPortfolioPhotos:^(NSArray *resultArray) {
         self.photosArray = resultArray;
         [self.activityIndicator stopAnimating];
+        [self.activityIndicator hidesWhenStopped];
         [self updateTableData];
         
     }];

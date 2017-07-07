@@ -11,6 +11,5 @@
 @interface SMAboutUsViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *photo;
-@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 @end
