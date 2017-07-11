@@ -13,7 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    UIImage *backBtn = [UIImage imageNamed:@"arrow1.png"];
+    UIImage *backBtn = [UIImage imageNamed:@"arrow_new3.png"];
     backBtn = [backBtn imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.backIndicatorImage = backBtn;
     self.backIndicatorTransitionMaskImage = backBtn;

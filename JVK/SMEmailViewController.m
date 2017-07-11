@@ -56,18 +56,36 @@
 
 - (IBAction)sendEmailAction:(SMCustomButton *)sender {
     
-    if ([MFMailComposeViewController canSendMail]) {
+    if (![self.emailField.text isEqualToString:@""]) {
+      
+        if ([MFMailComposeViewController canSendMail]) {
+            
+            NSArray *recipients = [NSArray arrayWithObject:@"fugza155@gmail.com"];
+            MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+            mc.mailComposeDelegate = self;
+            [mc setToRecipients:recipients];
+            [mc setSubject:[NSString stringWithFormat:@"%@", self.nameField.text]];
+            [mc setMessageBody:[NSString stringWithFormat:@"Name: %@\r\n Email: %@\r\n Message: \n%@",self.nameField.text, self.emailField.text, self.emailBodyTextView.text] isHTML: NO];
+            
+            [self presentViewController:mc animated:YES completion:nil];
+            
+        }
         
-        NSArray *recipients = [NSArray arrayWithObject:@"fugza155@gmail.com"];
-        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-        mc.mailComposeDelegate = self;
-        [mc setToRecipients:recipients];
-        [mc setSubject:[NSString stringWithFormat:@"%@", self.nameField.text]];
-        [mc setMessageBody:[NSString stringWithFormat:@"Name: %@\r\n Email: %@\r\n Message: \n%@",self.nameField.text, self.emailField.text, self.emailBodyTextView.text] isHTML: NO];
+    } else {
         
-        [self presentViewController:mc animated:YES completion:nil];
+        UIAlertController *contr = [UIAlertController alertControllerWithTitle:@"Warning" message:@"Please enter an email address" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+            [self dismissViewControllerAnimated:YES completion:nil];
+            
+        }];
+        
+        [contr addAction:cancel];
+        [self presentViewController:contr animated:YES completion:nil];
         
     }
+    
+
 }
 
 #pragma mark - MFMailComposeViewControllerDelegate
@@ -75,6 +93,19 @@
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
     
     [self dismissViewControllerAnimated:true completion:nil];
+    
+    self.emailField.text = @"";
+    self.nameField.text = @"";
+    self.emailBodyTextView.text = @"";
+    
+    UIAlertController *contr = [UIAlertController alertControllerWithTitle:@"Success" message:@"Thanks for your email. We will revert back to you in a moment!" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    }];
+    [contr addAction:cancel];
+    [self presentViewController:contr animated:YES completion:nil];
     
 }
 
@@ -119,6 +150,9 @@
             return NO;
         }
         
+        if ([textField.text length] == 0) {
+            self.hasAtSign = YES;
+        }
         
         if ([textField.text length] == 0 && [string isEqualToString:@"@"]) {
             

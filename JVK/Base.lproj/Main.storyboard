@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -415,7 +415,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="wBN-0Q-fqx">
-                            <rect key="frame" x="0.0" y="242" width="375" height="20"/>
+                            <rect key="frame" x="0.0" y="178" width="375" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <prototypes>
@@ -621,7 +621,7 @@
         <scene sceneID="vjk-F0-Tjq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6eo-pD-KGt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Services" image="Nails-50" id="D6O-hT-jAn"/>
+                    <tabBarItem key="tabBarItem" title="Services" image="nails" id="D6O-hT-jAn"/>
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
@@ -744,9 +744,9 @@
         <image name="Conference Call-50" width="30" height="30"/>
         <image name="Employee Card-50" width="30" height="30"/>
         <image name="JVK-logo2" width="924" height="936"/>
-        <image name="Nails-50" width="30" height="30"/>
         <image name="Tab1" width="30" height="30"/>
         <image name="lena" width="950" height="950"/>
+        <image name="nails" width="16" height="32"/>
         <image name="paper1" width="569" height="567"/>
     </resources>
 </document>
