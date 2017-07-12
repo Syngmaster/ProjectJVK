@@ -7,8 +7,8 @@
 //
 
 #import "SMTreatmentTableViewCell.h"
-#import "SMTreatmentModel.h"
 #import "SMDataService.h"
+#import "TreatmentMO+CoreDataClass.h"
 
 @interface SMTreatmentTableViewCell ()
 
@@ -56,10 +56,10 @@
 
 }
 
-- (void)configureCell:(SMTreatmentModel *) model {
+- (void)configureCell:(TreatmentMO *) model {
     
-    self.serviceImageView.image = model.treatImage;
-    self.titleLabel.text = model.treatmentTitle;
+    self.serviceImageView.image = [UIImage imageWithData:model.image];
+    self.titleLabel.text = model.title;
 }
 
 @end

@@ -23,19 +23,34 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.activityIndicator startAnimating];
-    
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
-    [[SMDataService sharedInstance] getPortfolioPhotos:^(NSArray *resultArray) {
-        self.photosArray = resultArray;
-        [self.activityIndicator stopAnimating];
-        [self.activityIndicator hidesWhenStopped];
-        [self updateTableData];
+    [self.activityIndicator startAnimating];
+
+    [[SMDataService sharedInstance] getPortfolioPhotos:^(NSArray *resultArray, NSError *error) {
         
+        if (resultArray) {
+            
+            self.photosArray = resultArray;
+            [self.activityIndicator stopAnimating];
+            [self.activityIndicator hidesWhenStopped];
+            [self updateTableData];
+            
+        } else {
+            
+            [self.activityIndicator stopAnimating];
+            
+            UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"No connection!" message:@"Please check your internet connection!" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
+            [controller addAction:action];
+            [self presentViewController:controller animated:YES completion:nil];
+        }
     }];
-    
 }
 
 - (void)updateTableData {

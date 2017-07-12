@@ -11,6 +11,7 @@
 #import "SMServiceTableViewController.h"
 #import "SMDataService.h"
 #import "SMTreatmentModel.h"
+#import "TreatmentMO+CoreDataClass.h"
 
 @interface SMTreatmentTableViewController ()
 
@@ -19,24 +20,33 @@
 @end
 
 @implementation SMTreatmentTableViewController
+@synthesize fetchedResultsController = _fetchedResultsController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.activityIndicator startAnimating];
-    
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem.title=@"";
     
-    [[SMDataService sharedInstance] getTreatments:^(NSArray *resultArray) {
+    [self.activityIndicator startAnimating];
+    
+    [[SMDataService sharedInstance] getTreatments:^(NSArray *resultArray, NSError *error) {
         
         self.dataArray = resultArray;
         [self.activityIndicator stopAnimating];
         [self.activityIndicator hidesWhenStopped];
+        [[SMDataService sharedInstance] saveToDatabase:resultArray];
         [self updateTableData];
         
     }];
     
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self updateTableData];
+
 }
 
 - (void)updateTableData {
@@ -45,11 +55,20 @@
     });
 }
 
+- (NSManagedObjectContext*) managedObjectContext {
+    
+    if (!_managedObjectContext) {
+        _managedObjectContext = [[SMDataService sharedInstance] persistentContainer].viewContext;
+    }
+    return _managedObjectContext;
+}
+
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.dataArray count];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+    return [sectionInfo numberOfObjects];
 }
 
 
@@ -61,7 +80,7 @@
         cell = [[SMTreatmentTableViewCell alloc] init];
     }
     
-    SMTreatmentModel *model = [self.dataArray objectAtIndex:indexPath.row];
+    TreatmentMO *model = [self.fetchedResultsController objectAtIndexPath:indexPath];
         
     [cell configureCell:model];
     
@@ -73,10 +92,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    TreatmentMO *treatment = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    SMTreatmentModel *model = [self.dataArray objectAtIndex:indexPath.row];
-    
-    [self performSegueWithIdentifier:@"detailVC" sender:model];
+    [self performSegueWithIdentifier:@"detailVC" sender:treatment];
     
 }
 
@@ -91,5 +109,97 @@
     detailVC.model = model;
 
 }
+
+#pragma mark - NSFetchedResultsControllerDelegate
+
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription* description =
+    [NSEntityDescription entityForName:@"Treatment"
+                inManagedObjectContext:self.managedObjectContext];
+    
+    [fetchRequest setEntity:description];
+    
+    NSSortDescriptor* firstNameDescriptor =
+    [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
+    
+    [fetchRequest setSortDescriptors:@[firstNameDescriptor]];
+    
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+    NSFetchedResultsController *aFetchedResultsController =
+    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                        managedObjectContext:self.managedObjectContext
+                                          sectionNameKeyPath:nil
+                                                   cacheName:nil];
+    aFetchedResultsController.delegate = self;
+    self.fetchedResultsController = aFetchedResultsController;
+    
+    NSError *error = nil;
+    if (![self.fetchedResultsController performFetch:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    return _fetchedResultsController;
+}
+
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
+           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        default:
+            return;
+    }
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath
+{
+    UITableView *tableView = self.tableView;
+    
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
+            break;
+    }
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView endUpdates];
+}
+
 
 @end

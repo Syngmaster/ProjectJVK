@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class SMTreatmentModel;
+@class TreatmentMO;
 
 @interface SMTreatmentTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *serviceImageView;
 @property (weak, nonatomic) IBOutlet UIView *customViewWithLabel;
 
-- (void)configureCell:(SMTreatmentModel *) model;
+- (void)configureCell:(TreatmentMO *) model;
 
 @end

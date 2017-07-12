@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <FirebaseDatabase/FirebaseDatabase.h>
 #import <FirebaseStorage/FirebaseStorage.h>
+#import <CoreData/CoreData.h>
 
-typedef void(^modelBlock)(NSArray *resultArray);
+typedef void(^modelBlock)(NSArray *resultArray, NSError *error);
 typedef void(^imageDataBlock)(NSData *data, NSError *error);
 
 @class SMTreatmentModel;
@@ -20,10 +21,18 @@ typedef void(^imageDataBlock)(NSData *data, NSError *error);
 @property (strong, nonatomic) FIRDatabaseReference *ref;
 @property (strong, nonatomic) FIRStorageReference *storageRef;
 
+@property (strong, nonatomic) NSManagedObjectContext* managedObjectContext;
+
+
 @property (nonatomic, strong) NSCache *imageCache;
 
 + (SMDataService *)sharedInstance;
 - (void)getTreatments:(modelBlock) completionHandler;
 - (void)getPortfolioPhotos:(modelBlock) completionHandler;
+- (void)saveToDatabase:(NSArray *) resultArray;
+
+@property (readonly, strong) NSPersistentContainer *persistentContainer;
+- (void)saveContext;
+
 
 @end

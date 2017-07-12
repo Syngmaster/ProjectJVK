@@ -9,7 +9,9 @@
 #import "SMTreatmentModel.h"
 #import "SMServicesModel.h"
 
+
 @implementation SMTreatmentModel
+
 
 - (instancetype)initWithDict:(NSDictionary *) dict {
     
@@ -41,5 +43,8 @@
     
     return self;
 }
+
+
+
 
 @end

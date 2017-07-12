@@ -8,24 +8,26 @@
 
 #import "SMPortfolioCollectionViewCell.h"
 #import "SMPortfolioModel.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation SMPortfolioCollectionViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.layer.borderWidth = 4;
-    self.layer.borderColor = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0].CGColor;
+    self.layer.borderWidth = 8;
+    self.layer.borderColor = [UIColor colorWithRed:90.0/255.0 green:90.0/255.0 blue:90.0/255.0 alpha:0.5].CGColor;
     CGRect frame = CGRectMake(CGRectGetMinX(self.frame), CGRectGetMinY(self.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
     UIImageView *frameImageView = [[UIImageView alloc] initWithFrame:frame];
-    frameImageView.image = [UIImage imageNamed:@"frame.png"];
     frameImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.contentView insertSubview:frameImageView aboveSubview:self.portfolioImage];
 
 }
 
 - (void)configureCell:(SMPortfolioModel *) model {
-    self.portfolioImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.imageURL]]];
+    
+    [self.portfolioImage setImageWithURL:[NSURL URLWithString:model.imageURL] placeholderImage:nil];
+
 }
 
 @end
