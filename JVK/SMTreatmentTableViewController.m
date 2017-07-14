@@ -27,7 +27,6 @@
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem.title=@"";
-    
     [self.activityIndicator startAnimating];
     
     [[SMDataService sharedInstance] getTreatments:^(NSArray *resultArray, NSError *error) {
@@ -93,7 +92,6 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     TreatmentMO *treatment = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
     [self performSegueWithIdentifier:@"detailVC" sender:treatment];
     
 }
@@ -105,12 +103,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
     SMServiceTableViewController *detailVC = [segue destinationViewController];
-    SMTreatmentModel *model = sender;
+    TreatmentMO *model = sender;
     detailVC.model = model;
 
 }
 
-#pragma mark - NSFetchedResultsControllerDelegate
+#pragma mark - NSFetchedResultsController
 
 - (NSFetchedResultsController *)fetchedResultsController
 {
@@ -151,6 +149,9 @@
     
     return _fetchedResultsController;
 }
+
+
+#pragma mark - NSFetchedResultsControllerDelegate
 
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller

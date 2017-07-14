@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,23 +19,28 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper1" translatesAutoresizingMaskIntoConstraints="NO" id="xyI-H7-GTc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="JVK-logo1" translatesAutoresizingMaskIntoConstraints="NO" id="9V6-Rn-xmo">
-                                <rect key="frame" x="16" y="162" width="343" height="343"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JVK-logo1" translatesAutoresizingMaskIntoConstraints="NO" id="9V6-Rn-xmo">
+                                <rect key="frame" x="8" y="169" width="398" height="398"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9V6-Rn-xmo" secondAttribute="height" multiplier="1:1" id="IFN-fQ-YJQ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="xyI-H7-GTc" secondAttribute="bottom" id="00C-8v-1sX"/>
+                            <constraint firstItem="9V6-Rn-xmo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8ab-Zk-7Ny"/>
+                            <constraint firstItem="9V6-Rn-xmo" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="8" id="F9r-b8-lAH"/>
                             <constraint firstItem="xyI-H7-GTc" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="PXe-By-2eO"/>
+                            <constraint firstItem="9V6-Rn-xmo" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="XPV-ji-7Rg"/>
                             <constraint firstItem="xyI-H7-GTc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ekx-MS-PKa"/>
                             <constraint firstAttribute="trailing" secondItem="xyI-H7-GTc" secondAttribute="trailing" id="rLR-Kc-zrh"/>
-                            <constraint firstItem="9V6-Rn-xmo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rpE-wF-h85"/>
                         </constraints>
                     </view>
                 </viewController>

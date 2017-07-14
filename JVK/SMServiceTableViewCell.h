@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class SMServicesModel;
+@class ServiceMO;
 
 @interface SMServiceTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
-- (void)configureCell:(SMServicesModel *) model;
+- (void)configureCell:(ServiceMO *) model;
 
 @end

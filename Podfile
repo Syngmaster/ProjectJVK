@@ -9,7 +9,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'FBSDKShareKit'
-
+pod 'Firebase/Messaging'
   # Pods for JVK
 
 end

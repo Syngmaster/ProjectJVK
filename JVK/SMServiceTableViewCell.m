@@ -7,7 +7,7 @@
 //
 
 #import "SMServiceTableViewCell.h"
-#import "SMServicesModel.h"
+#import "ServiceMO+CoreDataClass.h"
 
 @implementation SMServiceTableViewCell
 
@@ -16,10 +16,10 @@
     // Initialization code
 }
 
-- (void)configureCell:(SMServicesModel *) model {
+- (void)configureCell:(ServiceMO *) model {
     
-    self.nameLabel.text = model.serviceTitle;
-    self.priceLabel.text = [NSString stringWithFormat:@"%@ €", model.servicePrice];
+    self.nameLabel.text = model.name;
+    self.priceLabel.text = [NSString stringWithFormat:@"%@ €", model.price];
     
 }
 

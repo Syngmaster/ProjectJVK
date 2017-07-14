@@ -36,7 +36,7 @@
                                         <rect key="frame" x="0.0" y="274" width="359" height="264"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VX-u4-SdO" customClass="SMCustomButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="359" height="58.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="59"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
                                                 <state key="normal" title="Services">
@@ -47,7 +47,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRc-eH-Ooc" customClass="SMCustomButton">
-                                                <rect key="frame" x="0.0" y="68.666666666666686" width="359" height="58.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="69" width="359" height="58"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
                                                 <state key="normal" title="Portfolio">
@@ -58,7 +58,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m77-Mz-mfF" customClass="SMCustomButton">
-                                                <rect key="frame" x="0.0" y="137" width="359" height="58.666666666666629"/>
+                                                <rect key="frame" x="0.0" y="137" width="359" height="59"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
                                                 <state key="normal" title="About us">
@@ -69,7 +69,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cez-TM-upU" customClass="SMCustomButton">
-                                                <rect key="frame" x="0.0" y="205.66666666666663" width="359" height="58.333333333333371"/>
+                                                <rect key="frame" x="0.0" y="206" width="359" height="58"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
                                                 <state key="normal" title="Contact us">
@@ -216,7 +216,7 @@
                                         <rect key="frame" x="0.0" y="274" width="359" height="264"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbw-QN-YKI" customClass="SMCustomButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="359" height="58.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="59"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
                                                 <state key="normal" title="Directions">
@@ -227,7 +227,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0i-e8-qPW" customClass="SMCustomButton">
-                                                <rect key="frame" x="0.0" y="68.666666666666686" width="359" height="58.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="69" width="359" height="58"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
                                                 <state key="normal" title="Call us">
@@ -238,7 +238,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCW-nG-7Gb" customClass="SMCustomButton">
-                                                <rect key="frame" x="0.0" y="137" width="359" height="58.666666666666629"/>
+                                                <rect key="frame" x="0.0" y="137" width="359" height="59"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
                                                 <state key="normal" title="Email us">
@@ -249,7 +249,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdO-0B-wmU" customClass="SMCustomButton">
-                                                <rect key="frame" x="0.0" y="205.66666666666663" width="359" height="58.333333333333371"/>
+                                                <rect key="frame" x="0.0" y="206" width="359" height="58"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
                                                 <state key="normal" title="Like us on Facebook">
@@ -430,7 +430,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83x-ky-VkV">
-                                            <rect key="frame" x="10" y="10" width="355" height="130"/>
+                                            <rect key="frame" x="10" y="10" width="355" height="129"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
@@ -485,16 +485,16 @@
                                 <rect key="frame" x="16" y="72" width="343" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="serviceCell" id="0Lt-Tw-aVZ" customClass="SMServiceTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="10" reuseIdentifier="serviceCell" id="0Lt-Tw-aVZ" customClass="SMServiceTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Lt-Tw-aVZ" id="VQo-XB-cLV">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5a-Vj-IsR">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="c5a-Vj-IsR">
                                                     <rect key="frame" x="8" y="0.0" width="259" height="43"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -504,7 +504,7 @@
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="VbX-KB-klz"/>
                                                         <constraint firstAttribute="width" constant="60" id="tiD-2Q-HFB"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -519,7 +519,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="c5a-Vj-IsR" secondAttribute="bottom" id="zPR-9Z-1un"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="nameLabel" destination="c5a-Vj-IsR" id="sdO-R3-QKg"/>
                                             <outlet property="priceLabel" destination="tNj-0E-aOL" id="QQ6-UW-KcM"/>
@@ -544,6 +543,9 @@
                             <constraint firstItem="3LK-jk-V8g" firstAttribute="top" secondItem="cWQ-ZY-aq5" secondAttribute="bottom" constant="20" id="weK-Xk-jCE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="cWQ-ZY-aq5" id="vv2-La-cXm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YaJ-m7-t51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -746,7 +748,7 @@
         <image name="JVK-logo2" width="924" height="936"/>
         <image name="Tab1" width="30" height="30"/>
         <image name="lena" width="950" height="950"/>
-        <image name="nails" width="16" height="32"/>
+        <image name="nails" width="16" height="35"/>
         <image name="paper1" width="569" height="567"/>
     </resources>
 </document>

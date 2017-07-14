@@ -16,6 +16,6 @@
 
 @dynamic name;
 @dynamic price;
-@dynamic relationship;
+@dynamic treatment;
 
 @end

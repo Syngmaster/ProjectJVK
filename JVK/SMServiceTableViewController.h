@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@class SMTreatmentModel;
+@class TreatmentMO;
 
-@interface SMServiceTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface SMServiceTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext* managedObjectContext;
 
-@property (strong, nonatomic) SMTreatmentModel *model;
+@property (strong, nonatomic) TreatmentMO *model;
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nullable, nonatomic, copy) NSString *price;
-@property (nullable, nonatomic, retain) TreatmentMO *relationship;
+@property (nullable, nonatomic, retain) TreatmentMO *treatment;
 
 @end
 

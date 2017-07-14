@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>194839406347-8ogg88ggisc2ds7upmb329ag1juqnuvd.apps.googleusercontent.com</string>
+	<string>885020133950-km0i4nudifh3pgkgomuvlq7991pboe3u.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.194839406347-8ogg88ggisc2ds7upmb329ag1juqnuvd</string>
+	<string>com.googleusercontent.apps.885020133950-km0i4nudifh3pgkgomuvlq7991pboe3u</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDmLd_WZ3hgiSVEKdn95bwqhAtE5s8Nre0</string>
+	<string>AIzaSyAqCQRKV5NGre-v78StcWMVeqAONzCNL5s</string>
 	<key>GCM_SENDER_ID</key>
-	<string>194839406347</string>
+	<string>885020133950</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>ios.JVK</string>
+	<string>XC-com-JVKNailsAndBeauty</string>
 	<key>PROJECT_ID</key>
-	<string>jvkbusinessapp</string>
+	<string>jvknailsandbeauty</string>
 	<key>STORAGE_BUCKET</key>
-	<string>jvkbusinessapp.appspot.com</string>
+	<string>jvknailsandbeauty.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:194839406347:ios:4c5155ca59096385</string>
+	<string>1:885020133950:ios:9b4d5cb36b03588d</string>
 	<key>DATABASE_URL</key>
-	<string>https://jvkbusinessapp.firebaseio.com</string>
+	<string>https://jvknailsandbeauty.firebaseio.com</string>
 </dict>
 </plist>

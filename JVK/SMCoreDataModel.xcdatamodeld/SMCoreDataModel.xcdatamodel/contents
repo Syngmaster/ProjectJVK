@@ -3,15 +3,15 @@
     <entity name="Service" representedClassName="ServiceMO" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Treatment" inverseName="services" inverseEntity="Treatment" syncable="YES"/>
+        <relationship name="treatment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Treatment" inverseName="services" inverseEntity="Treatment" syncable="YES"/>
     </entity>
     <entity name="Treatment" representedClassName="TreatmentMO" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="services" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Service" inverseName="relationship" inverseEntity="Service" syncable="YES"/>
+        <relationship name="services" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Service" inverseName="treatment" inverseEntity="Service" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Service" positionX="-27" positionY="2" width="128" height="88"/>
+        <element name="Service" positionX="-54" positionY="-9" width="128" height="88"/>
         <element name="Treatment" positionX="-308" positionY="-4" width="128" height="88"/>
     </elements>
 </model>

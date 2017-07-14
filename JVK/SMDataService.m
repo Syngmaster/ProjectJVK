@@ -87,6 +87,7 @@
             
             treat.title = model.treatmentTitle;
             if ([treat.title isEqualToString:@"Hands"]) {
+                
                 treat.image = UIImageJPEGRepresentation([UIImage imageNamed:@"manicure.jpeg"], 0);
                 
             } else if ([treat.title isEqualToString:@"Legs"]) {
@@ -112,13 +113,11 @@
                 service.price = [NSString stringWithFormat:@"%@", model.servicePrice];
                 [treat addServicesObject:service];
             }
+            
             [self.managedObjectContext save:nil];
 
         }
-        
-
     }
- 
 }
 
 - (void)getPortfolioPhotos:(modelBlock) completionHandler {
