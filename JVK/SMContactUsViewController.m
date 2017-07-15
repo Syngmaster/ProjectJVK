@@ -42,7 +42,7 @@
 
 - (IBAction)callButton:(id)sender {
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://0899510834"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://0860535989"] options:@{} completionHandler:nil];
     
 }
 

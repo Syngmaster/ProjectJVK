@@ -182,7 +182,7 @@
 {
     UITableView *tableView = self.tableView;
     
-    switch(type) {
+    switch((signed)type) {
         case NSFetchedResultsChangeInsert:
             [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
