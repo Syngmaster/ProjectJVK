@@ -414,12 +414,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "Max&Viktoria";
+				ORGANIZATIONNAME = Syngmaster;
 				TargetAttributes = {
 					DC42CC591E52294500E471CB = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = RLMXU9393M;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -622,7 +622,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -664,7 +664,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -677,12 +677,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = JVK/JVK.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RLMXU9393M;
 				INFOPLIST_FILE = JVK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "XC-com-JVKNailsAndBeauty";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cfb0a4cc-2e6d-42b8-8df4-ee2f6b935c17";
+				PROVISIONING_PROFILE_SPECIFIER = JVKDevProfile;
 			};
 			name = Debug;
 		};
@@ -692,12 +696,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = JVK/JVK.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Maksim Artemov (RLMXU9393M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Maksim Artemov (RLMXU9393M)";
 				DEVELOPMENT_TEAM = RLMXU9393M;
 				INFOPLIST_FILE = JVK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "XC-com-JVKNailsAndBeauty";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5e670db5-0b24-4f55-90bb-2948ac44800f";
+				PROVISIONING_PROFILE_SPECIFIER = JVKDistProfile;
 			};
 			name = Release;
 		};

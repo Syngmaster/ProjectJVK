@@ -60,7 +60,7 @@
       
         if ([MFMailComposeViewController canSendMail]) {
             
-            NSArray *recipients = [NSArray arrayWithObject:@"fugza155@gmail.com"];
+            NSArray *recipients = [NSArray arrayWithObject:@"hatanzeiska@gmail.com"];
             MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
             mc.mailComposeDelegate = self;
             [mc setToRecipients:recipients];

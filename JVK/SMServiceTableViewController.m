@@ -22,7 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    //array2 = @[@"Treading:", @"         Eyebrows",@"         Upper Lip",@"         Chin",@"         Side Face"];
     self.navigationItem.title = self.model.title;
 
     
